@@ -24,9 +24,9 @@ struct TemperatureView: View {
                     Text("↑ 36°").font(.caption).foregroundColor(.white)
                     Text("↓ 19°").font(.caption).foregroundColor(.white)
                 }
-            }//.padding(.leading,(UIScreen.main.bounds.width - 180))
+            }
             
-        }.frame(alignment: .trailing)
+        }//.frame(alignment: .trailing)
         
         
     }

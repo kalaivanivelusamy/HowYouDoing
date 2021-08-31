@@ -4,6 +4,8 @@ import SwiftUI
 
 struct HomeView: View {
     @State var selectedMetrics: Int = 0
+//    @State var weatherMoodImage: String
+    
     var body: some View {
         
         ZStack {
@@ -28,7 +30,8 @@ struct HomeView: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
-                .frame(width:100,height: 40,alignment: .trailing)
+                .frame(width:100,height: 40)
+                .padding(.leading,300)
                 
                 
 //                Spacer().frame(height:100)
@@ -37,12 +40,12 @@ struct HomeView: View {
                    
                     TemperatureView().frame(alignment: .trailing)
                     
-                    WeatherMoodView()
+                    WeatherMoodView(image: "cloud.sun.rain.fill")
                     
                     Text("Last updated on Aug 30,2021 at 11:16 PM").font(.caption2).foregroundColor(.white)
                 }.padding(.top,350)
                 
-            }
+            }//.frame(alignment: .trailing)
             
            
             
