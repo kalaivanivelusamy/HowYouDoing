@@ -4,7 +4,7 @@ import Foundation
 
 struct Wind: Codable {
     
-    let speed: Int
+    let speed: Float
     let deg: Float
     
     enum Direction: String {

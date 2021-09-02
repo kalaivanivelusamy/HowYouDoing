@@ -9,7 +9,7 @@ struct WeatherDetail: Identifiable,Codable {
     let name: String
     let cod: Int
     let base: String
-    let visibility: Int
+    let visibility: Int?
     
     let dt: TimeInterval
     var date: Date{
@@ -21,7 +21,7 @@ struct WeatherDetail: Identifiable,Codable {
         let lat: Float
     }
     
-    let coord: Coordinates //struct
+    let coord: Coordinates
     
     let weather: [Weather]
   
@@ -29,26 +29,20 @@ struct WeatherDetail: Identifiable,Codable {
     let main: Main 
     
     struct Main: Codable {
-        
-        let temp: Float
+        let temp: Double
         let feels_like: Float
         let temp_min: Float
         let temp_max: Float
-        let pressure: Int
+        let pressure: Float
         let humidity: Int
-        
     }
     
-   
-    
-    let wind: Wind //struct
-    
-    let clouds: Clouds //struct
-    
+    let wind: Wind 
+    let clouds: Clouds 
     
     struct Sys: Codable,Identifiable {
         
-        var id = UUID()
+        let id: Int
         let type: Int?
         let country: String
         let sunrise: TimeInterval
@@ -57,19 +51,6 @@ struct WeatherDetail: Identifiable,Codable {
     
     let sys: Sys 
     
-    
-    
-    
-    struct Wind {
-        
-    }
-    
-    struct Clouds {
-        
-    }
-    
-    struct Sys {
-        
-    }
+   
     
 }

@@ -3,6 +3,10 @@
 import SwiftUI
 
 struct TemperatureView: View {
+    @State var temp: Double = 0.0
+    @State var feelsLike: Float = 24
+    @State var temp_max: Double = 32.3
+    @State var temp_min: Double = 12.2
     
     var body: some View {
         
@@ -17,12 +21,12 @@ struct TemperatureView: View {
             }
             
             VStack(alignment: .leading,spacing:5) {
-                Text("33°").font(.largeTitle).fontWeight(.semibold).foregroundColor(.white)
-                Text("Feels like 33°").font(.caption).foregroundColor(.white)
+                Text("\(temp)°").font(.largeTitle).fontWeight(.semibold).foregroundColor(.white)
+                Text("Feels like \(feelsLike)°").font(.caption).foregroundColor(.white)
                 Spacer().frame(height: 5)
                 HStack(spacing: 5){
-                    Text("↑ 36°").font(.caption).foregroundColor(.white)
-                    Text("↓ 19°").font(.caption).foregroundColor(.white)
+                    Text("↑ \(temp_max)°").font(.caption).foregroundColor(.white)
+                    Text("↓ \(temp_min)°").font(.caption).foregroundColor(.white)
                 }
             }
             
@@ -34,6 +38,6 @@ struct TemperatureView: View {
 
 struct TemperatureView_Previews: PreviewProvider {
     static var previews: some View {
-        TemperatureView()
+        HomeView()
     }
 }
