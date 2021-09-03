@@ -4,7 +4,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State var selectedMetrics: Int = 0
-    @ObservedObject var cityWeather = WeatherDataBycity(city: "bangalore")
+            @ObservedObject var cityWeather = WeatherDataBycity(city: "bangalore")
     
     var body: some View {
         
@@ -26,6 +26,11 @@ struct HomeView: View {
                         Text("℉").tag(1)
                     }
                     .pickerStyle(SegmentedPickerStyle())
+                    .onChange(of: selectedMetrics){ val in
+                        cityWeather.fetch(city: "BANGALORE",units: Units(rawValue: selectedMetrics) ?? .metric) { 
+                            cityWeather.weatherDetail?.main.feels_like
+                        }
+                    }
                     
                     Text(cityWeather.weatherDetail?.name.description ?? "").foregroundColor(.white).font(.caption)
                 }
@@ -33,20 +38,23 @@ struct HomeView: View {
                 .padding(.leading,300)
                 
                 .onAppear(perform: {
-                    cityWeather.fetch {
+                    cityWeather.fetch(city: "BANGALORE",units: Units(rawValue: selectedMetrics) ?? .metric) {
                        // print(weather.weatherDetail)
+                        cityWeather.weatherDetail?.main.feels_like
                     }
                 })
 //                Spacer().frame(height:100)
                 
                 VStack (alignment: .leading, spacing: 30){
                    
-                    TemperatureView(temp: (cityWeather.weatherDetail?.main.temp) ?? 0.0,feelsLike: (cityWeather.weatherDetail?.main.feels_like) ?? 0.0,temp_max: (cityWeather.weatherDetail?.main.temp_max) ?? 0.0,temp_min: (cityWeather.weatherDetail?.main.temp_min) ?? 0.0).frame(alignment: .trailing)
+                    if let weatherDetail = cityWeather.weatherDetail{
+                        TemperatureView(cityWeather: cityWeather, temp: weatherDetail.main.temp,temp_max: weatherDetail.main.temp_max, temp_min: weatherDetail.main.temp_min)
+                        .frame(alignment: .trailing)
+                        WeatherMoodView(cityWeather: cityWeather, image: "cloud.sun.rain.fill")
+                        Text("Last updated on \(weatherDetail.date)").font(.caption2).foregroundColor(.white).lineLimit(2).padding(15)
+                    }
                     
-                    WeatherMoodView(image: "cloud.sun.rain.fill")
-                    
-                    Text("Last updated on Aug 30,2021 at 11:16 PM").font(.caption2).foregroundColor(.white)
-                }.padding(.top,350)
+                }.padding(.top,350).padding(.leading,15)
                 
             }//.frame(alignment: .trailing)
             
@@ -56,35 +64,9 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
         
     }
 }
 
-// MARK: -  extension
-extension Color {
-    init(hex: String) {
-        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-        var int: UInt64 = 0
-        Scanner(string: hex).scanHexInt64(&int)
-        let a, r, g, b: UInt64
-        switch hex.count {
-            case 3: // RGB (12-bit)
-                (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-            case 6: // RGB (24-bit)
-                (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-            case 8: // ARGB (32-bit)
-                (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
-            default:
-                (a, r, g, b) = (1, 1, 1, 0)
-        }
-        
-        self.init(
-            .sRGB,
-            red: Double(r) / 255,
-            green: Double(g) / 255,
-            blue:  Double(b) / 255,
-            opacity: Double(a) / 255
-        )
-    }
-}
+

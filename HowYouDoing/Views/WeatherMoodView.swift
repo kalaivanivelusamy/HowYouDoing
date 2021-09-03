@@ -4,7 +4,8 @@
 import SwiftUI
 
 struct WeatherMoodView: View {
-    
+    @State var cityWeather: WeatherDataBycity
+
     var image: String
     
     var body: some View {
@@ -12,7 +13,9 @@ struct WeatherMoodView: View {
             Image(systemName: image)
                 .font(.largeTitle)
                 .foregroundColor(.white)
-            Text("Delhi").font(.caption).foregroundColor(.white)
+            if let weatherDetail = cityWeather.weatherDetail{
+                Text("\(weatherDetail.name)").font(.caption).foregroundColor(.white)
+            }
         }
     }
 }
