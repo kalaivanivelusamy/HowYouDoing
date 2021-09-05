@@ -6,12 +6,6 @@ struct TemperatureView: View {
     
     @ObservedObject var cityWeather: WeatherDataBycity 
 
-//    @State var temp: Double = 0.0
-//    @State var feelsLike: Float = 24
-//    @State var temp_max: Float = 32.3
-//    @State var temp_min: Float = 12.2
-//    @State var humidity: Int = 0
-    
     @Binding var selectedMetrics: Units
     
     var body: some View {
@@ -24,7 +18,6 @@ struct TemperatureView: View {
                 if let weatherDetail = cityWeather.weatherDetail{
                     let val = weatherDetail.main.humidity
                 Text("Humidity \(String(describing: val)) %").font(.caption).foregroundColor(.white)
-                
                 }
                 
                 Text("8 mph").font(.caption).foregroundColor(.white)

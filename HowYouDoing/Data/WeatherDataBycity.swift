@@ -50,4 +50,21 @@ class WeatherDataBycity: ObservableObject {
         }
     }
     
+    
+    func fetchWeatherForAllDay(city: String,units: Units = .metric, completionHandler: @escaping () -> Void) {
+        
+        API.shared.getWeatherRequest(path: "forecast/hourly", params: ["q" : city,"units": units.stringValue]) { (result: Result<WeatherDetail,API.APIError>) in 
+            
+            switch result {
+                case .success(_) :
+                    if let weatherDetail = try? result.get(){
+                        self.weatherDetail = weatherDetail
+                        self.weatherMain = weatherDetail.main
+                    }
+                case .failure(_):
+                    break
+            }
+        }
+        
+    }
 }
