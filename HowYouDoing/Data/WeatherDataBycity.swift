@@ -20,11 +20,11 @@ class WeatherDataBycity: ObservableObject {
     @Published var weatherDetail: WeatherDetail? = nil
     var weatherMain: WeatherDetail.Main? = nil
     
-    let city: String
-    
-    init(city: String) {
-        self.city = city
-    }
+//    let city: String
+//    
+//    init(city: String) {
+//        self.city = city
+//    }
     
     func addCity(city: String) {
 //        fetch(completion: {

@@ -4,14 +4,15 @@ import SwiftUI
 
 struct TemperatureView: View {
     
-    @State var cityWeather: WeatherDataBycity 
+    @ObservedObject var cityWeather: WeatherDataBycity 
 
-    @State var temp: Double = 0.0
-    @State var feelsLike: Float = 24
-    @State var temp_max: Float = 32.3
-    @State var temp_min: Float = 12.2
-    @State var humidity: Int = 0
-
+//    @State var temp: Double = 0.0
+//    @State var feelsLike: Float = 24
+//    @State var temp_max: Float = 32.3
+//    @State var temp_min: Float = 12.2
+//    @State var humidity: Int = 0
+    
+    @Binding var selectedMetrics: Units
     
     var body: some View {
         
@@ -20,24 +21,29 @@ struct TemperatureView: View {
             VStack {
                 Spacer().frame(height: 50)
 
-                Text("Humidity \(humidity)%").font(.caption).foregroundColor(.white)
+                if let weatherDetail = cityWeather.weatherDetail{
+                    let val = weatherDetail.main.humidity
+                Text("Humidity \(String(describing: val)) %").font(.caption).foregroundColor(.white)
+                
+                }
+                
                 Text("8 mph").font(.caption).foregroundColor(.white)
                 Text("☂ 100%").font(.caption).foregroundColor(.white)
             }
             
             VStack(alignment: .leading,spacing:5) {
-                let formattedTemp = String(format: "%.1f", temp)
-                let formattedFeelsLike = String(format: "%.1f", feelsLike)
-                let formattedTempMax = String(format: "%.1f", temp_max)
-                let formattedTempMin = String(format: "%.1f", temp_min)
+                let formattedTemp = String(format: "%.1f", cityWeather.weatherDetail?.main.temp as! CVarArg)
+                let formattedFeelsLike = String(format: "%.1f", cityWeather.weatherDetail?.main.feels_like as! CVarArg)
+                let formattedTempMax = String(format: "%.1f", cityWeather.weatherDetail?.main.temp_max as! CVarArg)
+                let formattedTempMin = String(format: "%.1f", cityWeather.weatherDetail?.main.temp_min as! CVarArg)
 
 
-                Text("\(formattedTemp)℃").font(.largeTitle).fontWeight(.semibold).foregroundColor(.white)
-                Text("Feels like \(formattedFeelsLike)℃").font(.caption).foregroundColor(.white)
+                Text("\(formattedTemp) \(selectedMetrics == .metric ? "℃" :  "℉")").font(.largeTitle).fontWeight(.semibold).foregroundColor(.white)
+                Text("Feels like \(formattedFeelsLike) \(selectedMetrics == .metric ? "℃" :  "℉")").font(.caption).foregroundColor(.white)
                 Spacer().frame(height: 5)
                 HStack(spacing: 5){
-                    Text("↑ \(formattedTempMax)℃").font(.caption).foregroundColor(.white)
-                    Text("↓ \(formattedTempMin)℃").font(.caption).foregroundColor(.white)
+                    Text("↑ \(formattedTempMax) \(selectedMetrics == .metric ? "℃" :  "℉")").font(.caption).foregroundColor(.white)
+                    Text("↓ \(formattedTempMin) \(selectedMetrics == .metric ? "℃" :  "℉")").font(.caption).foregroundColor(.white)
                 }
             }
             
