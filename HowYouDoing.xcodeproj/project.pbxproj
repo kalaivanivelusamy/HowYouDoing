@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C952EC4326E67DBD005DDD2F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C952EC4226E67DBD005DDD2F /* LocationManager.swift */; };
 		C98B345F26DDD4CE00E30F8F /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98B345E26DDD4CE00E30F8F /* Weather.swift */; };
 		C98B346126DDD84800E30F8F /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98B346026DDD84800E30F8F /* WeatherDetail.swift */; };
 		C98B346326DDDC9800E30F8F /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98B346226DDDC9800E30F8F /* Clouds.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C952EC4226E67DBD005DDD2F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C98B345E26DDD4CE00E30F8F /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		C98B346026DDD84800E30F8F /* WeatherDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetail.swift; sourceTree = "<group>"; };
 		C98B346226DDDC9800E30F8F /* Clouds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				C98B346A26DE9C2B00E30F8F /* WeatherDataBycity.swift */,
+				C952EC4226E67DBD005DDD2F /* LocationManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				C99E0FD326E4EB2600A92AD6 /* ChangeCityView.swift in Sources */,
 				C98B346126DDD84800E30F8F /* WeatherDetail.swift in Sources */,
 				C9B1FB1926DD4C3E00A9E421 /* WeatherMoodView.swift in Sources */,
+				C952EC4326E67DBD005DDD2F /* LocationManager.swift in Sources */,
 				C9B1FAEB26DD450700A9E421 /* ContentView.swift in Sources */,
 				C98B345F26DDD4CE00E30F8F /* Weather.swift in Sources */,
 				C9B1FAE926DD450700A9E421 /* HowYouDoingApp.swift in Sources */,

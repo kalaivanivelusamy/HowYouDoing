@@ -3,10 +3,14 @@
 import SwiftUI
 
 struct HomeView: View {
+   
+    
     @State var selectedMetrics: Int = 0
     @State var selectedUnit: Units = Units.metric
     @ObservedObject var cityWeather: WeatherDataBycity 
     
+    @Binding var tab: Tab
+
     var body: some View {
         
         ZStack {
@@ -17,7 +21,8 @@ struct HomeView: View {
             VStack {
                 VStack{
                     Button(action: {
-                       
+                        tab = .location
+                        ChangeCityView()
                     }, label: {
                         Text("Change City").foregroundColor(.white).font(.caption)
                     }).padding(.trailing,10)

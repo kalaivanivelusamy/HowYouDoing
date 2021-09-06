@@ -1,6 +1,13 @@
 
 import SwiftUI
 
+enum Tab {
+    
+    case daily
+    case home
+    case location
+}
+
 struct MainView: View {
     var body: some View {
             PageView()
@@ -15,13 +22,17 @@ struct MainView_Previews: PreviewProvider {
 
 
 struct PageView: View {
+   
+    @State var selection: Tab = .home 
+    
     var body: some View {
         
-        TabView{
-            HomeView(cityWeather: WeatherDataBycity()).tag(0)
+        TabView(selection: $selection) {
+            
+            HomeView(cityWeather: WeatherDataBycity(), tab: $selection).tag(Tab.home)
                 .edgesIgnoringSafeArea(.all)
-            ChangeCityView().tag(1).edgesIgnoringSafeArea(.all)
-
+            
+            ChangeCityView().tag(Tab.location).edgesIgnoringSafeArea(.all)
         }
 //        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
 
