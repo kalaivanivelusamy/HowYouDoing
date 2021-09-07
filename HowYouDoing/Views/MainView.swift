@@ -24,15 +24,16 @@ struct MainView_Previews: PreviewProvider {
 struct PageView: View {
    
     @State var selection: Tab = .home 
-    
+    @State var cityName: String = "Bangalore"
+
     var body: some View {
         
         TabView(selection: $selection) {
             
-            HomeView(cityWeather: WeatherDataBycity(), tab: $selection).tag(Tab.home)
+            HomeView(cityWeather: WeatherDataBycity(), cityName: $cityName, tab: $selection).tag(Tab.home)
                 .edgesIgnoringSafeArea(.all)
             
-            ChangeCityView().tag(Tab.location).edgesIgnoringSafeArea(.all)
+            ChangeCityView(cityName: $cityName, cityWeather: WeatherDataBycity()).tag(Tab.location).edgesIgnoringSafeArea(.all)
         }
 //        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
 

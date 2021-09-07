@@ -32,6 +32,8 @@ struct TemperatureView: View {
 
 
                 Text("\(formattedTemp) \(selectedMetrics == .metric ? "℃" :  "℉")").font(.largeTitle).fontWeight(.semibold).foregroundColor(.white)
+
+            
                 Text("Feels like \(formattedFeelsLike) \(selectedMetrics == .metric ? "℃" :  "℉")").font(.caption).foregroundColor(.white)
                 Spacer().frame(height: 5)
                 HStack(spacing: 5){

@@ -9,6 +9,8 @@ struct HomeView: View {
     @State var selectedUnit: Units = Units.metric
     @ObservedObject var cityWeather: WeatherDataBycity 
     
+    @Binding var cityName: String
+
     @Binding var tab: Tab
 
     var body: some View {
@@ -22,7 +24,7 @@ struct HomeView: View {
                 VStack{
                     Button(action: {
                         tab = .location
-                        ChangeCityView()
+                        let _ = ChangeCityView(cityName: $cityName, cityWeather: WeatherDataBycity())
                     }, label: {
                         Text("Change City").foregroundColor(.white).font(.caption)
                     }).padding(.trailing,10)
@@ -34,7 +36,7 @@ struct HomeView: View {
                     .pickerStyle(SegmentedPickerStyle())
                     .onChange(of: selectedMetrics){ val in
                         selectedUnit = Units(rawValue: selectedMetrics) ?? .metric
-                        cityWeather.fetch(city: "BANGALORE",units: Units(rawValue: selectedMetrics) ?? .metric) { 
+                        cityWeather.fetch(city: cityName,units: Units(rawValue: selectedMetrics) ?? .metric) { 
                             cityWeather.weatherDetail?.main.feels_like
                         }
                     }
@@ -45,7 +47,7 @@ struct HomeView: View {
                 .padding(.leading,300)
                 
                 .onAppear(perform: {
-                    cityWeather.fetch(city: "BANGALORE",units: Units(rawValue: selectedMetrics) ?? .metric) {
+                    cityWeather.fetch(city: cityName,units: Units(rawValue: selectedMetrics) ?? .metric) {
                        // print(weather.weatherDetail)
                         cityWeather.weatherDetail?.main.feels_like
                     }

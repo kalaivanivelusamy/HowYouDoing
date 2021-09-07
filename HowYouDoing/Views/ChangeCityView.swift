@@ -5,36 +5,41 @@ struct ChangeCityView: View {
     
     //@Binding var tab: Tab = Tab.location
 
-    @State var cityName: String = "Bangalore"
+    @Binding var cityName: String
     @StateObject var locationManager = LocationManager()
     
-    init() {
-       UITableView.appearance().separatorStyle = .none
-       UITableViewCell.appearance().backgroundColor = UIColor(Color.clear)
-       UITableView.appearance().backgroundColor = UIColor(Color.clear)
-    }
+    @ObservedObject var cityWeather: WeatherDataBycity 
 
 
     var body: some View {
+        
        
         ZStack{
             LinearGradient(gradient: Gradient(colors: [.blue,.black]), startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
        
             VStack{
-                TextField("Enter Location", text: $cityName).frame(alignment: .center)
-                List{
-                    Text("Mumbai").background(Color.clear)
-                    Text("chennai")
+                TextField("Enter Location", text: $cityName).frame(alignment: .center).textFieldStyle(RoundedBorderTextFieldStyle()).padding(.leading,100)
+                    .padding(.trailing,100)
+                    .foregroundColor(.primary)
+                
+                Button(action: {
                     
-                }
-                .frame(width: UIScreen.main.bounds.width*0.60, height: 300, alignment: .center).padding(50)
-                .listRowBackground(Color.clear)
+                    cityWeather.fetch(city: cityName,units: .metric) {
+                       // print(weather.weatherDetail)
+                        cityWeather.weatherDetail?.main.feels_like
+                    }
+                    
+                }, label: {
+                    Text("Check Weather").foregroundColor(.white).font(.title)
+                })
+               
+                CityCellView()
             
                 Button(action: {
                 
                 }, label: {
-                    Text("Use Current location")
+                    Text("Use Current location").foregroundColor(.white).font(.title).fontWeight(.bold)
                 })
             }
         }

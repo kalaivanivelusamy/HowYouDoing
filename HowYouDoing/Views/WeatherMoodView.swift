@@ -4,7 +4,7 @@
 import SwiftUI
 
 struct WeatherMoodView: View {
-    @State var cityWeather: WeatherDataBycity
+    @ObservedObject var cityWeather: WeatherDataBycity
 
     var image: String
     
