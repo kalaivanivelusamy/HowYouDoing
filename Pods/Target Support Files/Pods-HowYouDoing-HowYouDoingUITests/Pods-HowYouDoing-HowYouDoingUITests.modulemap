@@ -1,6 +1,0 @@
-framework module Pods_HowYouDoing_HowYouDoingUITests {
-  umbrella header "Pods-HowYouDoing-HowYouDoingUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
