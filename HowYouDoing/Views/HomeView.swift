@@ -29,17 +29,7 @@ struct HomeView: View {
                         Text("Change City").foregroundColor(.white).font(.caption)
                     }).padding(.trailing,10)
                     
-                    Picker("Change metrics", selection: $selectedMetrics) {
-                        Text("℃").tag(0) 
-                        Text("℉").tag(1)
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-                    .onChange(of: selectedMetrics){ val in
-                        selectedUnit = Units(rawValue: selectedMetrics) ?? .metric
-                        cityWeather.fetch(city: cityName,units: Units(rawValue: selectedMetrics) ?? .metric) { 
-                            cityWeather.weatherDetail?.main.feels_like
-                        }
-                    }
+                    MetricPicker(cityWeather: cityWeather, cityName: $cityName)
                     
                     Text(cityWeather.weatherDetail?.name.description ?? "").foregroundColor(.white).font(.caption)
                 }
@@ -48,11 +38,9 @@ struct HomeView: View {
                 
                 .onAppear(perform: {
                     cityWeather.fetch(city: cityName,units: Units(rawValue: selectedMetrics) ?? .metric) {
-                       // print(weather.weatherDetail)
                         cityWeather.weatherDetail?.main.feels_like
                     }
                 })
-//                Spacer().frame(height:100)
                 
                 VStack (alignment: .leading, spacing: 30){
                    
@@ -65,9 +53,34 @@ struct HomeView: View {
                     
                 }.padding(.top,350).padding(.leading,15)
                 
-            }//.frame(alignment: .trailing)
+            }
             
         }
+    }
+}
+
+struct MetricPicker: View {
+    
+    @State var selectedMetrics: Int = 0
+    @State var selectedUnit: Units = Units.metric
+    @ObservedObject var cityWeather: WeatherDataBycity 
+    @Binding var cityName: String
+
+   
+    var body: some View {
+        
+        Picker("Change metrics", selection: $selectedMetrics) {
+            Text("℃").tag(0) 
+            Text("℉").tag(1)
+        }
+        .pickerStyle(SegmentedPickerStyle())
+        .onChange(of: selectedMetrics){ val in
+            selectedUnit = Units(rawValue: selectedMetrics) ?? .metric
+            cityWeather.fetch(city: cityName,units: Units(rawValue: selectedMetrics) ?? .metric) { 
+                cityWeather.weatherDetail?.main.feels_like
+            }
+        }
+        
     }
 }
 
