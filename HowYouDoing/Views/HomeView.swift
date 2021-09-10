@@ -24,7 +24,7 @@ struct HomeView: View {
                 VStack{
                     Button(action: {
                         tab = .location
-                        let _ = ChangeCityView(cityName: $cityName, cityWeather: WeatherDataBycity())
+                        let _ = ChangeCityView(tab: $tab, cityName: $cityName, cityWeather: WeatherDataBycity())
                     }, label: {
                         Text("Change City").foregroundColor(.white).font(.caption)
                     }).padding(.trailing,10)

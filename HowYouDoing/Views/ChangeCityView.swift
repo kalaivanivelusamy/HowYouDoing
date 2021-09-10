@@ -3,7 +3,7 @@ import SwiftUI
 
 struct ChangeCityView: View {
     
-    //@Binding var tab: Tab = Tab.location
+    @Binding var tab: Tab
 
     @Binding var cityName: String
     @StateObject var locationManager = LocationManager()
@@ -34,7 +34,7 @@ struct ChangeCityView: View {
                     Text("Check Weather").foregroundColor(.white).font(.title)
                 })
                
-                CityCellView()
+                CityCellView(selectedCityName: $cityName, tab: $tab)
             
                 Button(action: {
                 

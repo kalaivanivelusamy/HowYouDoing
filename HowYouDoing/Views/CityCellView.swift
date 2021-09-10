@@ -3,16 +3,17 @@ import SwiftUI
 
 struct CityCellView: View {
    
-    @State var selectedCityName: String = ""
+    @Binding var selectedCityName: String 
+    @Binding var tab: Tab 
 
     @State var cityNames: [String] = ["Mumbai","Bangalore","Delhi","Chennai","Mumbai","Bangalore","Delhi","Chennai"]
 
     
-        init() {
-           UITableView.appearance().separatorStyle = .none
-            UITableViewCell.appearance().backgroundColor = UIColor(Color.gray.opacity(0.25))
-           UITableView.appearance().backgroundColor = UIColor(Color.clear)
-        }
+//    init(tab: Binding<Tab>) {
+//           UITableView.appearance().separatorStyle = .none
+//            UITableViewCell.appearance().backgroundColor = UIColor(Color.gray.opacity(0.25))
+//           UITableView.appearance().backgroundColor = UIColor(Color.clear)
+//        }
     
     
     var body: some View {
@@ -26,13 +27,12 @@ struct CityCellView: View {
     
     var recentCityNames: some View {
         ForEach(cityNames, id: \.self) { city in
-            Text(city).frame(height:30).font(.title2).foregroundColor(.white)
+            Text(city).frame(height:30).font(.title2).foregroundColor(.black)
                 .onTapGesture {
                     print("Tapped \(city)")
                     selectedCityName = city
-                   // selection = .home
-//                    HomeView(cityWeather: WeatherDataBycity(), cityName: $selectedCityName, tab: $selection).tag(Tab.home)
-//                        .edgesIgnoringSafeArea(.all)
+                    tab = .home
+                    HomeView(cityWeather: WeatherDataBycity(), cityName: $selectedCityName, tab: $tab).tag(Tab.home)
 
                 }
         }
