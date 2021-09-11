@@ -37,7 +37,10 @@ struct ChangeCityView: View {
                 CityCellView(selectedCityName: $cityName, tab: $tab)
             
                 Button(action: {
-                
+                    cityName = locationManager.chosenCity ?? "Bangalore"
+                    tab = .home
+                    HomeView(cityWeather: WeatherDataBycity(), cityName: $cityName, tab: $tab).tag(Tab.home)
+
                 }, label: {
                     Text("Use Current location").foregroundColor(.white).font(.title).fontWeight(.bold)
                 })
