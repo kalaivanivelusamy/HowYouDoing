@@ -12,6 +12,9 @@ struct HomeView: View {
     @Binding var cityName: String
 
     @Binding var tab: Tab
+    
+    
+    @State private var showCurrentLocationSheet = false
 
     var body: some View {
         
@@ -23,11 +26,16 @@ struct HomeView: View {
             VStack {
                 VStack{
                     Button(action: {
-                        tab = .location
-                        let _ = ChangeCityView(tab: $tab, cityName: $cityName, cityWeather: WeatherDataBycity())
+                        tab = .home
+                        showCurrentLocationSheet.toggle()
                     }, label: {
                         Text("Change City").foregroundColor(.white).font(.caption)
-                    }).padding(.trailing,10)
+                    })
+                    .padding(.trailing,10)
+                    .sheet(isPresented: $showCurrentLocationSheet, content: {
+                        ChangeCityView(tab: $tab, cityName: $cityName, cityWeather: WeatherDataBycity(), showCurrentLocationSheet: $showCurrentLocationSheet)
+                    })
+                    
                     
                     MetricPicker(cityWeather: cityWeather, cityName: $cityName)
                     

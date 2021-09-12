@@ -56,18 +56,21 @@ struct TemperatureView: View {
 
 //                Text("\(formattedTemp) \(selectedMetrics == .metric ? "℃" :  "℉")").font(.largeTitle).fontWeight(.semibold).foregroundColor(.white)
                 
-                Text(String(tempValue)+"\(selectedMetrics == .metric ? "℃" :  "℉")").font(.largeTitle).fontWeight(.semibold).foregroundColor(.white).modifier(NumberView(number: Float(tempValue)))
+                Text("\(tempValue)")
+                    .font(.system(size: 80, weight: .bold, design: .default))
+                    .foregroundColor(.white)
+                    .modifier(NumberView(number: Float(tempValue)))
                 
-                Text("Feels like \(formattedFeelsLike) \(selectedMetrics == .metric ? "℃" :  "℉")").font(.caption).foregroundColor(.white)
+                Text("Feels like \(formattedFeelsLike)°").font(.caption).foregroundColor(.white)
                 Spacer().frame(height: 5)
                 HStack(spacing: 5){
-                    Text("↑ \(formattedTempMax) \(selectedMetrics == .metric ? "℃" :  "℉")").font(.caption).foregroundColor(.white)
-                    Text("↓ \(formattedTempMin) \(selectedMetrics == .metric ? "℃" :  "℉")").font(.caption).foregroundColor(.white)
+                    Text("↑ \(formattedTempMax)° ").font(.caption).foregroundColor(.white)
+                    Text("↓ \(formattedTempMin)° ").font(.caption).foregroundColor(.white)
                 }
             }.onAppear(perform: {
-                withAnimation(Animation.spring().delay(1)){
+                withAnimation(Animation.spring()){
                     windSpeed = 8
-                    tempValue = 100.12
+                    tempValue = cityWeather.weatherDetail?.main.temp ?? 0
                 }
             })
         }

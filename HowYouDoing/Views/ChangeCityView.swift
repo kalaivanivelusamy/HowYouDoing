@@ -10,10 +10,11 @@ struct ChangeCityView: View {
     
     @ObservedObject var cityWeather: WeatherDataBycity 
 
+    @Binding var showCurrentLocationSheet: Bool
+
 
     var body: some View {
         
-       
         ZStack{
             LinearGradient(gradient: Gradient(colors: [.blue,.black]), startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
@@ -24,23 +25,20 @@ struct ChangeCityView: View {
                     .foregroundColor(.primary)
                 
                 Button(action: {
-                    
                     cityWeather.fetch(city: cityName,units: .metric) {
-                       // print(weather.weatherDetail)
-                        cityWeather.weatherDetail?.main.feels_like
                     }
-                    
+                    showCurrentLocationSheet.toggle()
                 }, label: {
                     Text("Check Weather").foregroundColor(.white).font(.title)
                 })
                
-                CityCellView(selectedCityName: $cityName, tab: $tab)
+                CityCellView(selectedCityName: $cityName, tab: $tab, showCurrentLocationSheet: $showCurrentLocationSheet)
             
                 Button(action: {
                     cityName = locationManager.chosenCity ?? "Bangalore"
                     tab = .home
-                    HomeView(cityWeather: WeatherDataBycity(), cityName: $cityName, tab: $tab).tag(Tab.home)
-
+//                    HomeView(cityWeather: WeatherDataBycity(), cityName: $cityName, tab: $tab).tag(Tab.home)
+                    showCurrentLocationSheet.toggle()
                 }, label: {
                     Text("Use Current location").foregroundColor(.white).font(.title).fontWeight(.bold)
                 })

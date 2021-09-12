@@ -5,6 +5,7 @@ struct CityCellView: View {
    
     @Binding var selectedCityName: String 
     @Binding var tab: Tab 
+    @Binding var showCurrentLocationSheet: Bool
 
     @State var cityNames: [String] = ["Mumbai","Bangalore","Delhi","Chennai","Mumbai","Bangalore","Delhi","Chennai"]
 
@@ -33,6 +34,8 @@ struct CityCellView: View {
                     selectedCityName = city
                     tab = .home
                     HomeView(cityWeather: WeatherDataBycity(), cityName: $selectedCityName, tab: $tab).tag(Tab.home)
+                    showCurrentLocationSheet.toggle()
+
 
                 }
         }
