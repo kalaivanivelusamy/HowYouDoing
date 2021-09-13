@@ -26,6 +26,7 @@ struct ChangeCityView: View {
                 
                 Button(action: {
                     cityWeather.fetch(city: cityName,units: .metric) {
+                        print("Weather data by city \(cityWeather)")
                     }
                     showCurrentLocationSheet.toggle()
                 }, label: {

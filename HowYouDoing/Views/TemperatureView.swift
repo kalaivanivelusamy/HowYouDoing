@@ -5,15 +5,17 @@ import SwiftUI
 
 struct NumberView: AnimatableModifier {
     
-    var number: Float
+    var number: Double
     
-    var animatableData: Float {
+    var animatableData: Double {
         get { number }
         set { number = newValue }
     }
     
     func body(content: Content) -> some View {
-        Text(String(number)).foregroundColor(.white)
+        Text(String(number))
+            .font(.system(size: 80, weight: .bold, design: .default))
+            .foregroundColor(.white)
        
     }
 }
@@ -43,7 +45,7 @@ struct TemperatureView: View {
                 Text("Humidity \(String(describing: val)) %").font(.caption).foregroundColor(.white)
                 }
                 
-                Text(String(windSpeed)).font(.caption).foregroundColor(.white).modifier(NumberView(number: Float(windSpeed)))
+                Text(String(windSpeed)).font(.caption).foregroundColor(.white)
                 Text("☂ 100%").font(.caption).foregroundColor(.white)
             }
             
@@ -52,14 +54,12 @@ struct TemperatureView: View {
                 let formattedFeelsLike = String(format: "%.1f", cityWeather.weatherDetail?.main.feels_like as! CVarArg)
                 let formattedTempMax = String(format: "%.1f", cityWeather.weatherDetail?.main.temp_max as! CVarArg)
                 let formattedTempMin = String(format: "%.1f", cityWeather.weatherDetail?.main.temp_min as! CVarArg)
-
+                let temp = String(format: "%.1f", cityWeather.weatherDetail?.main.temp ?? 0)
 
 //                Text("\(formattedTemp) \(selectedMetrics == .metric ? "℃" :  "℉")").font(.largeTitle).fontWeight(.semibold).foregroundColor(.white)
                 
-                Text("\(tempValue)")
-                    .font(.system(size: 80, weight: .bold, design: .default))
-                    .foregroundColor(.white)
-                    .modifier(NumberView(number: Float(tempValue)))
+                Text("\(temp)")
+                    .modifier(NumberView(number: Double(temp) ?? 0))
                 
                 Text("Feels like \(formattedFeelsLike)°").font(.caption).foregroundColor(.white)
                 Spacer().frame(height: 5)
@@ -71,6 +71,7 @@ struct TemperatureView: View {
                 withAnimation(Animation.spring()){
                     windSpeed = 8
                     tempValue = cityWeather.weatherDetail?.main.temp ?? 0
+
                 }
             })
         }
