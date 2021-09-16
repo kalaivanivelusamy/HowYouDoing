@@ -28,15 +28,15 @@ struct PageView: View {
 
     var body: some View {
         
-        TabView(selection: $selection) {
+        //TabView(selection: $selection) {
             
             HomeView(cityWeather: WeatherDataBycity(), cityName: $cityName, tab: $selection).tag(Tab.home)
                 .edgesIgnoringSafeArea(.all)
             
-            WeeklyView()
+           // WeeklyView()
             
             //ChangeCityView(tab: $selection, cityName: $cityName, cityWeather: WeatherDataBycity()).tag(Tab.location).edgesIgnoringSafeArea(.all)
-        }
+       // }
 //        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
 
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))

@@ -26,7 +26,9 @@ struct ChangeCityView: View {
                 
                 Button(action: {
                     cityWeather.fetch(city: cityName,units: .metric) {
-                        print("Weather data by city \(cityWeather)")
+                        //print("Weather data by city \(cityWeather)")
+                        tab = .home
+                    HomeView(cityWeather: WeatherDataBycity(), cityName: $cityName, tab: $tab).tag(Tab.home)
                     }
                     showCurrentLocationSheet.toggle()
                 }, label: {
@@ -38,7 +40,7 @@ struct ChangeCityView: View {
                 Button(action: {
                     cityName = locationManager.chosenCity ?? "Bangalore"
                     tab = .home
-//                    HomeView(cityWeather: WeatherDataBycity(), cityName: $cityName, tab: $tab).tag(Tab.home)
+                    HomeView(cityWeather: WeatherDataBycity(), cityName: $cityName, tab: $tab).tag(Tab.home)
                     showCurrentLocationSheet.toggle()
                 }, label: {
                     Text("Use Current location").foregroundColor(.white).font(.title).fontWeight(.bold)

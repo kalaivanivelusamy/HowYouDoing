@@ -38,7 +38,7 @@ struct WeatherDetail: Identifiable,Codable {
     }
     
     let wind: Wind 
-    let clouds: Clouds 
+    let clouds: Clouds
     
     struct Sys: Codable,Identifiable {
         
@@ -50,7 +50,4 @@ struct WeatherDetail: Identifiable,Codable {
     }
     
     let sys: Sys 
-    
-   
-    
 }
