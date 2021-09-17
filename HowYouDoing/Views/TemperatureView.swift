@@ -45,7 +45,7 @@ struct TemperatureView: View {
                 Text("Humidity \(String(describing: val)) %").font(.caption).foregroundColor(.white)
                 }
                 
-                Text(String(windSpeed)).font(.caption).foregroundColor(.white)
+                Text("Wind \(String(describing: windSpeed))").font(.caption).foregroundColor(.white)
                 Text("☂ 100%").font(.caption).foregroundColor(.white)
             }
             

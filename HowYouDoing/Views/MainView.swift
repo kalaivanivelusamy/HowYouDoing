@@ -32,6 +32,7 @@ struct PageView: View {
             
             HomeView(cityWeather: WeatherDataBycity(), cityName: $cityName, tab: $selection).tag(Tab.home)
                 .edgesIgnoringSafeArea(.all)
+                
             
            // WeeklyView()
             
