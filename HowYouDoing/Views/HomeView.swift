@@ -85,10 +85,9 @@ struct MetricPicker: View {
         .onChange(of: selectedMetrics){ val in
             selectedUnit = Units(rawValue: selectedMetrics) ?? .metric
             cityWeather.fetch(city: cityName,units: Units(rawValue: selectedMetrics) ?? .metric) { 
-                cityWeather.weatherDetail?.main.feels_like
+                //cityWeather.weatherDetail?.main.feels_like
             }
         }
-        
     }
 }
 

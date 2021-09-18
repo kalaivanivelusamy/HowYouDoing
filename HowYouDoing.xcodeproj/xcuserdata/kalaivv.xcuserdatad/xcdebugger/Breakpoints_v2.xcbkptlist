@@ -14,8 +14,8 @@
             filePath = "HowYouDoing/Data/WeatherDataBycity.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "fetch(city:units:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -86,118 +86,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3936D721-F88A-4E58-808E-7BF7F15F4706"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HowYouDoing/Views/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "3936D721-F88A-4E58-808E-7BF7F15F4706 - f659b930fd91b205"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #4 (Swift.Int) -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.Text)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in HowYouDoing.HomeView.body.getter : some"
-                  moduleName = "HowYouDoing"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalaivv/Desktop/iOS/HowYouDoing/HowYouDoing/Views/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "147">
-               </Location>
-               <Location
-                  uuid = "3936D721-F88A-4E58-808E-7BF7F15F4706 - 773bea2300e19179"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #4 (Swift.Int) -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.Text)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in HowYouDoing.HomeView.body.getter : some"
-                  moduleName = "HowYouDoing"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalaivv/Desktop/iOS/HowYouDoing/HowYouDoing/Views/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "216F8BCF-B593-407D-AE97-FC5E9000303F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HowYouDoing/Data/WeatherDataBycity.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10"
-            landmarkName = "stringValue"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "99C2DB8F-2ED0-4E35-9778-4AA0CEAD4148"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HowYouDoing/Views/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "400D2A7C-D9B0-4CBC-911D-6F25F21A9A99"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HowYouDoing/Views/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "730F23A6-3D49-41EE-AACE-9CCE3334582B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HowYouDoing/Views/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "D0E2FB6C-63B4-4152-8154-99C4BA935A02"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -205,8 +93,8 @@
             filePath = "HowYouDoing/Views/TemperatureView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -221,40 +109,40 @@
             filePath = "HowYouDoing/Views/TemperatureView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "922ADE82-79A1-4616-A41D-E4D124F3A1CD - 3a5b340df7517cf1"
+                  uuid = "922ADE82-79A1-4616-A41D-E4D124F3A1CD - e32fbfde1026e46e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.Text&gt;, SwiftUI.Text, SwiftUI.Text)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt;&gt;)&gt;&gt;)&gt; in HowYouDoing.TemperatureView.body.getter : some"
+                  symbolName = "closure #2 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ModifiedContent&lt;SwiftUI.Text, HowYouDoing.NumberView&gt;, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.Text&gt;, SwiftUI.Text, SwiftUI.Text)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0)&gt; in HowYouDoing.TemperatureView.body.getter : some"
                   moduleName = "HowYouDoing"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kalaivv/Desktop/iOS/HowYouDoing/HowYouDoing/Views/TemperatureView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "520">
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "359">
                </Location>
                <Location
-                  uuid = "922ADE82-79A1-4616-A41D-E4D124F3A1CD - 3a5b340df7517cf1"
+                  uuid = "922ADE82-79A1-4616-A41D-E4D124F3A1CD - e32fbfde1026e46e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.Text&gt;, SwiftUI.Text, SwiftUI.Text)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt;&gt;)&gt;&gt;)&gt; in HowYouDoing.TemperatureView.body.getter : some"
+                  symbolName = "closure #2 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ModifiedContent&lt;SwiftUI.Text, HowYouDoing.NumberView&gt;, SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.Text&gt;, SwiftUI.Text, SwiftUI.Text)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0)&gt; in HowYouDoing.TemperatureView.body.getter : some"
                   moduleName = "HowYouDoing"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kalaivv/Desktop/iOS/HowYouDoing/HowYouDoing/Views/TemperatureView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "774">
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "605">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -262,7 +150,23 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5E9C5235-C46A-4AE2-8B48-398CF8F11139"
+            uuid = "B18A12ED-F72F-4D86-84BF-D193D0759EF3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HowYouDoing/Views/CityCellView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B11AD91E-51BE-463C-A35D-2603A71C169E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -273,102 +177,6 @@
             endingLineNumber = "31"
             landmarkName = "body"
             landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6601FA0D-2570-4DC2-AAC0-B02E91E5941B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HowYouDoing/Views/ChangeCityView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "6601FA0D-2570-4DC2-AAC0-B02E91E5941B - d4b9af1627288d71"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Button&lt;SwiftUI.Text&gt;, HowYouDoing.CityCellView, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Button&lt;SwiftUI.Text&gt;, HowYouDoing.CityCellView, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;)&gt; in HowYouDoing.ChangeCityView.body.getter : some"
-                  moduleName = "HowYouDoing"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalaivv/Desktop/iOS/HowYouDoing/HowYouDoing/Views/ChangeCityView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "22">
-               </Location>
-               <Location
-                  uuid = "6601FA0D-2570-4DC2-AAC0-B02E91E5941B - fd0860d53de80153"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Button&lt;SwiftUI.Text&gt;, HowYouDoing.CityCellView, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Button&lt;SwiftUI.Text&gt;, HowYouDoing.CityCellView, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;)&gt; in HowYouDoing.ChangeCityView.body.getter : some"
-                  moduleName = "HowYouDoing"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalaivv/Desktop/iOS/HowYouDoing/HowYouDoing/Views/ChangeCityView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F120F158-FC5E-4A9B-9AD8-646CAAD6896A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HowYouDoing/Data/WeatherDataBycity.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "fetch(city:units:completionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F120F158-FC5E-4A9B-9AD8-646CAAD6896A - a68449c9f53a0a75"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HowYouDoing.WeatherDataBycity.fetch(city: Swift.String, units: HowYouDoing.Units, completionHandler: () -&gt; ()) -&gt; ()"
-                  moduleName = "HowYouDoing"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalaivv/Desktop/iOS/HowYouDoing/HowYouDoing/Data/WeatherDataBycity.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "160">
-               </Location>
-               <Location
-                  uuid = "F120F158-FC5E-4A9B-9AD8-646CAAD6896A - ce6ceedf1edb3fb8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;HowYouDoing.WeatherDetail, HowYouDoing.API.APIError&gt;) -&gt; () in HowYouDoing.WeatherDataBycity.fetch(city: Swift.String, units: HowYouDoing.Units, completionHandler: () -&gt; ()) -&gt; ()"
-                  moduleName = "HowYouDoing"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalaivv/Desktop/iOS/HowYouDoing/HowYouDoing/Data/WeatherDataBycity.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "127">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

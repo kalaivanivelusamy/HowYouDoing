@@ -42,7 +42,10 @@ struct TemperatureView: View {
 
                 if let weatherDetail = cityWeather.weatherDetail{
                     let val = weatherDetail.main.humidity
+                    let deg = weatherDetail.wind.direction
                 Text("Humidity \(String(describing: val)) %").font(.caption).foregroundColor(.white)
+                    Text("deg \(String(describing: val)) %").font(.caption).foregroundColor(.white)
+
                 }
                 
                 Text("Wind \(String(describing: windSpeed))").font(.caption).foregroundColor(.white)
@@ -75,8 +78,6 @@ struct TemperatureView: View {
                 }
             })
         }
-        
-        
     }
 }
 
